@@ -16,9 +16,7 @@ public class Task6 {
 		Scanner scanner = new Scanner(System.in);
 		int horizontal = scanner.nextInt();
 		int vertical = scanner.nextInt();
-		//System.out.print("horizontal");
-		//System.out.println("vertical");
-		//int rectangle [][] = new int[horizontal][vertical];
+	
 		int i, j;
 		for (i = 1; i <= horizontal; i++) {
 			for (j = 1; j <= vertical; j++) {
