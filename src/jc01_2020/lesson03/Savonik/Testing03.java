@@ -1,4 +1,4 @@
-package jc01_2020.Savonik;
+package jc01_2020.lesson03.Savonik;
 
 import org.junit.Test;
 
