@@ -1,4 +1,4 @@
-
+package jc01_2020.lesson02.Savonik;
 
 /*
 *
@@ -15,10 +15,10 @@ public class Task6 {
         int code = scanner.nextInt();
     char a=(char)code;
     if ((a>='A'&&a<='Z')||(a>=97&& a<=122))  {
-        System.out.println("код английской буквы - "+a);
+        System.out.println("Да");
     }
         else
-    { System.out.println("нет, это символ - "+a);
+    { System.out.println("Нет");
     }
 
 }

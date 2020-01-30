@@ -1,10 +1,10 @@
-package Lesson2;
+package jc01_2020.lesson02.Savonik;
 
 /*
-*
-* Среди трех чисел найти среднее по величине
-*
-*/
+ *
+ * Среди трех чисел найти среднее по величине
+ *
+ */
 
 import javax.sound.midi.Soundbank;
 import java.util.Arrays;
@@ -16,18 +16,17 @@ public class Task4 {
         int first = scanner.nextInt();
         int second = scanner.nextInt();
         int third = scanner.nextInt();
-       
+
         int max = Math.max(Math.max(first,second),third);
         int min = Math.min(Math.min(first,second),third);
-       int mid = first+second+third-min-max;
-        System.out.println("средним из них будем считать "+ mid);
+        int mid = first+second+third-min-max;
+        System.out.println(mid);
         
         
         
         /*
         
         int medium = first+second+third;
-
         if {first-medium
 if ((first > second && first < third) || (first > third && first < second)) {
             System.out.println("first среднее");
@@ -39,10 +38,10 @@ if ((first > second && first < third) || (first > third && first < second)) {
         else
         if ((third > second && third < first) || (third < second && third > first)) {
             System.out.println("third среднее");
-            */  
-         
-       
+            */
 
-        
+
+
+
     }
 }

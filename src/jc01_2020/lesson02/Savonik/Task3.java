@@ -1,4 +1,4 @@
-
+package jc01_2020.lesson02.Savonik;
 
 /*
 * */
@@ -11,15 +11,14 @@ public class Task3 {
         long first = scanner.nextLong();
         long second = scanner.nextLong();
 
-
+        if (second == 0) {
+            System.out.println("Недопустимая операция");
+        } else
         if (first% second ==0)  {
-            System.out.println("делится");
-            System.out.println("частное равно  "+first/ second);
+            System.out.println("Делится. Частное = "+first/ second);
         }
-        else
-            System.out.println("не делится, частное равно  "+first/ second);
-        { System.out.println("остаток равен  "+first% second);
-
+        else {
+            System.out.println("Не делится. Частное = "+first/second+ ". Остаток = "+first% second);
         }
 
     }

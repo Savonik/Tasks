@@ -1,4 +1,4 @@
-
+package jc01_2020.lesson02.Savonik;
 
 /*
 *
@@ -15,20 +15,19 @@ public class Task1 {
 
         switch (numeric){
             case 1:
-                System.out.println("введено число 1");
+                System.out.println("Число 1");
                 break;
 
                 case 2:
-                System.out.println("введено число 2");
+                System.out.println("Число 2");
                 break;
 
                 case 3:
-                System.out.println("введено число 3");
+                System.out.println("Число 3");
                 break;
 
-
             default:
-                System.out.println("никакое число");
+                System.out.println("Другое число");
 
         }
 
