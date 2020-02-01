@@ -15,9 +15,17 @@ import java.util.Scanner;
 public class Task1 {
     public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-    	int[] array = new int[7];
+		int[] array = new int[7];
 		for (int i = 0; i < array.length; i++) {
 			array[i] = scanner.nextInt();
 		}
-    }
+		int summ = 0;
+		for (int k = 0; k < array.length; k++) {
+			if ((array[k]>0)&&(array[k]%2==0)) {
+			summ = summ+array[k];}
+		}
+		System.out.println(summ);
+	}
+	
 }
+

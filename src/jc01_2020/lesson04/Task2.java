@@ -18,11 +18,19 @@ package jc01_2020.lesson04;
 import java.util.Scanner;
 
 public class Task2 {
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		int[] array = new int[7];
+		int summ = 0;
 		for (int i = 0; i < array.length; i++) {
 			array[i] = scanner.nextInt();
+			summ = summ + array[i];
 		}
-    }
+		int mid = summ / array.length;
+		for (int k = 0; k < array.length; k++) {
+			if (array[k] > mid) {
+				System.out.println(array[k]);
+			}
+		}
+	}
 }
