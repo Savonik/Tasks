@@ -31,7 +31,7 @@ public class Task5 {
 				for (int i = 0; i < array[0].length; i++){
 				sum = sum + array[j][i];
 				}
-				if (sum>= max) {
+				if (sum>=max) {
 					max=sum; m=j;}
 			    }
 

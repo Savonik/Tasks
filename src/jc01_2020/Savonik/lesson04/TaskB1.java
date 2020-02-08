@@ -21,7 +21,7 @@ package jc01_2020.Savonik.lesson04;
  *
  */
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class TaskB1 {
@@ -51,8 +51,8 @@ public class TaskB1 {
 			}
 		}
 
-			for (int f = 0; f < array.length; f++) {
-				System.out.println(array[f]);
+		for (int i : array) {
+			System.out.println(i);
 		}
 
 

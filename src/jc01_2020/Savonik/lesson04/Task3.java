@@ -27,12 +27,11 @@ public class Task3 {
 		int min=abs(array[0]);
 		for (int k = 1; k < array.length; k++) {
 			if (abs(array[k]) < min) {
-				min = array [k];
+				min = abs(array[k]);
 				ind = k;
 			}
 		}
+
 		System.out.println(ind);
-		
-		
     }
 }

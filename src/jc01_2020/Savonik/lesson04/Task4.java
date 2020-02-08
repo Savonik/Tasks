@@ -22,7 +22,6 @@ public class Task4 {
 			array[i] = scanner.nextInt();
 		}
 		  int min=array[0];
-		
 		  int minindex = 0;
 		  int maxindex = 0;
 		  for (int k = 1; k < array.length; k++) {
