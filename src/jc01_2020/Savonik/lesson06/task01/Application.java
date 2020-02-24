@@ -10,7 +10,7 @@ public class Application {
         System.out.println( time1.getFullSeconds());
         System.out.println( time1.CompareTo(time2));
         time1.timePrint();
-        time3.AlltimePrint(45854896);
+        time3.allTimePrint(1200);
        
     }
 }
