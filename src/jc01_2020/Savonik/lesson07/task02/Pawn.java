@@ -7,6 +7,7 @@ public class Pawn extends Figure{
 
     @Override
     public boolean moveTo(char toVertical, int toHorizontal) {
-        return false;
+        return (toVertical - vertical == 1 && toHorizontal == horizontal &&
+                toVertical >= 'a' && toVertical <= 'h' && toHorizontal >= 1 && toHorizontal <= 8);
     }
 }

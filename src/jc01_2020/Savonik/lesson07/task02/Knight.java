@@ -6,6 +6,8 @@ public class Knight extends Figure{
     }
     @Override
     public boolean moveTo(char toVertical, int toHorizontal) {
-        return false;
+        return ((Math.abs(toVertical - vertical) == 1 && Math.abs(toHorizontal - horizontal) == 2) ||
+                (Math.abs(toVertical - vertical) == 2 && Math.abs(toHorizontal - horizontal) == 1) &&
+                toVertical >= 'a' && toVertical <= 'h' && toHorizontal >= 1 && toHorizontal <= 8);
     }
 }

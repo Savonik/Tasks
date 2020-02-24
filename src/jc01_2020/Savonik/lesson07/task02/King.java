@@ -7,9 +7,7 @@ public class King extends Figure {
 
     @Override
     public boolean moveTo(char toVertical, int toHorizontal) {
-        if ((toVertical>'H')||(toVertical<'A')||(toHorizontal>8)||(toHorizontal<1)){
-            System.out.println("Ваш ход вышел за допустимые рамки");
-        }
-        return false;
+        return (Math.abs(toVertical - vertical) <= 1 && Math.abs(toHorizontal - horizontal) <= 1 &&
+                toVertical >= 'a' && toVertical <= 'h' && toHorizontal >= 1 && toHorizontal <= 8);
     }
 }

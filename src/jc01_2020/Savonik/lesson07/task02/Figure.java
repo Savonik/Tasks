@@ -2,8 +2,8 @@ package jc01_2020.Savonik.lesson07.task02;
 
 public abstract class Figure {
 
-	private char vertical;
-	private int horizontal;
+	 char vertical;
+	 int horizontal;
 
 	public Figure(final char vertical, final int horizontal) {
 		this.vertical = vertical;
