@@ -8,6 +8,8 @@ public class Bishop extends Figure{
 
     @Override
     public boolean moveTo(char toVertical, int toHorizontal) {
+        
+        
         return false;
     }
 }
