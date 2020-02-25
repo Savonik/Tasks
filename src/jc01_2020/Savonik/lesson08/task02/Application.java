@@ -9,30 +9,30 @@ package jc01_2020.Savonik.lesson08.task02;
  */
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Application {
-	
+
 	static class Cat {
 	}
 
-	interface Filter{
+	interface Filter {
 		boolean apply(Object o);
 	}
-	
-	public static <Object> void Filter(Object array) {
+
+	static <T> T[] filter(Object[] objects, Filter filter) {
+		List<T> result = new ArrayList<>();
+		for (Object object : objects) {
+			if (filter.apply(object)) result.add((T) object);
+		}
+		return (T[]) result.toArray();
 	}
 
 	public static void main(String[] args) {
-		
-		Object[] array = {"String", 1, 2.0, new Cat(), 85L, new Cat(),4,4};
-		List<Object> ListObjects = new ArrayList<>();
-		for (int i=0; i<array.length;i++) {
-            if (array[i] instanceof Number){
-			ListObjects.add(array[i]);
-            }
-		}
-		System.out.println(ListObjects);
+		Object[] array = {"String", 1, 2.0, new Application.Cat(), 85L, new Application.Cat()};
+		Object[] result = filter(array, o -> o instanceof Number);
+		System.out.println(Arrays.toString(result));
+
 	}
-	
 }
