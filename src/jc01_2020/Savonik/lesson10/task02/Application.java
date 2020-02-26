@@ -25,12 +25,7 @@ public class Application {
         }
         System.out.println(intSet);
 
-        Iterator<Integer> iterator = intSet.iterator();
-        while (iterator.hasNext()) {
-            if (iterator.next() > 50) {
-                iterator.remove();
-            }
-        }
+        intSet.removeIf(integer -> integer > 50);
         System.out.println(intSet);
     }
 
