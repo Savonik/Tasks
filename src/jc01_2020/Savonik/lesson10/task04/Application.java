@@ -7,9 +7,6 @@ package jc01_2020.Savonik.lesson10.task04;
  *
  */
 
-
-import java.awt.List;
-import java.security.KeyStore;
 import java.util.*;
 
 public class Application {
@@ -23,19 +20,18 @@ public class Application {
                 String firstName = scanner.nextLine();
                 map.put(surname, firstName);
             }
-            System.out.println(map);
+            System.out.println("newMap = "+map);
             for (Map.Entry<String, String> entry1 : map.entrySet()) {
-                int i = 0;
+                int count = 0;
                 for (Map.Entry<String, String> entry2 : map.entrySet()) {
-                    if (entry1.getValue().equals(entry2.getValue())) { i = i + 1; }
+                    if (entry1.getValue().equals(entry2.getValue())) {
+                        count++;
+                    }
                 }
-                if (i >= 2) { s.add(entry1.getKey()); }
+                if (count >= 2) { s.add(entry1.getKey()); }
             }
-
-            for (String value : s) {
-                map.remove(value);
-            }
-            System.out.println("map = " + map);
+            s.forEach(map::remove);
+            System.out.println("filteredMap = " + map);
         }
     }
 }
