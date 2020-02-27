@@ -23,10 +23,9 @@ public class Task5 {
 				array[j][i] = scanner.nextInt();
 			}
 		}
-            int j;
 		    int max=0;
 		    int m = 1;
-			for (j = 0; j < array.length; j++) {
+			for (int j = 0; j < array.length; j++) {
 				int sum = 0;
 				for (int i = 0; i < array[0].length; i++){
 				sum = sum + array[j][i];
