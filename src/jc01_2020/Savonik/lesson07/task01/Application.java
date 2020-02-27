@@ -20,7 +20,7 @@ public class Application {
 		Shape Shape1 = new Sphere(5);
 		Shape Shape2 = new Pyramid(6, 7);
 		Shape Shape3 = new Cylinder(5,6);
-		Box Box1 = new Box(500);
+		Box Box1 = new Box(1500);
 		System.out.println(Box1.add(Shape1));
 		System.out.println(Box1.add(Shape2));
 		System.out.println(Box1.volumebox);

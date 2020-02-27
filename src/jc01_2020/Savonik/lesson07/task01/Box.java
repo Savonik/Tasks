@@ -12,8 +12,8 @@ public class Box{
      this.volumebox=volumeBox;   
     }
     
-    public boolean add (Shape shape){ 
-        this.volumebox=volumebox-shape.getVolume();
+    public boolean add (Shape shape){
+        this.volumebox -= shape.getVolume();
         return volumebox > 0;
     }
     
