@@ -1,11 +1,11 @@
 package jc01_2020.Savonik.lesson08.task03;
 
 public class Date {
-    private int day;
-    private int month;
-    private int year;
-    private int getDayOfYear;
-    boolean leapYear;
+    public int day;
+    public int month;
+    public int year;
+    public static int getDayOfYear;
+    public static boolean leapYear;
 
     public Date(int day, int month, int year) {
         this.day = day;
@@ -24,14 +24,13 @@ public class Date {
         return month;
     }
 
-    public void setMonth(int year) {
-        this.year = year;
+    public void setMonth(int month) {
+        this.month = month;
     }
 
     public int getYear() {
         return year;
     }
-
     public void setYear(int year) {
         this.year = year;
     }
@@ -52,7 +51,6 @@ public class Date {
         return valueOf(n);
     }
 
-
     public boolean leapYear() {
         return leapYear;
     }
@@ -62,14 +60,15 @@ public class Date {
     }
 
     public static int daysBetween(Date startDate, Date endDate) {
-        int daysBetween = endDate.getDay() + 1 - startDate.getDay();
-
-        for (int i = startDate.year; i <= endDate.getYear(); i++) {
-            startDate.setYear(i);
-            daysBetween += startDate.leapYear() ? 366 : 365;
+      
+        int daysBetween = endDate.getDay() - startDate.getDay();
+        int month1 = startDate.getMonth();
+        Date.Year date1 = new Year();
+        for (int i = startDate.getYear(); i <= endDate.getYear(); i++) {
+            date1.setYear(i);
+            daysBetween += date1.getDayOfYear();
         }
-        for (int i = 1; i < startDate.getMonth(); i++) {
-            startDate.setMonth(i);
+        for (int i = 1; i < month1; i++) {
             daysBetween -= startDate.getDays();
         }
         for (int i = endDate.getMonth(); i <= 12; i++) {
@@ -77,19 +76,23 @@ public class Date {
             daysBetween -= endDate.getDays();
         }
         return daysBetween;
-
-    }
-
-    class Year {
+       }
+       
+        private static class Year {
+            private int year;
+            public void setYear(int year) {
+                this.year = year;
+            }
+        
         public boolean leapYear() {
             return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
         }
 
         private int getDayOfYear() {
-            if (!leapYear()) {
-                return 365;
-            } else {
+            if (leapYear()) {
                 return 366;
+            } else {
+                return 365;
             }
         }
 
@@ -98,7 +101,7 @@ public class Date {
     static class Month {
         public int getDays(int monthNumber, boolean leapYear) {
             if (monthNumber == 2) {
-                return leapYear ? 28 : 29;
+                return leapYear ? 29 : 28;
             } else if (monthNumber <= 7) {
                 return monthNumber % 2 == 1 ? 31 : 30;
             } else return monthNumber % 2 == 1 ? 30 : 31;
@@ -110,9 +113,11 @@ public class Date {
 
     public int getDays() {
         if (month == 2) {
-            return leapYear ? 28 : 29;
+            return (leapYear ? 29 : 28);
         } else if (month <= 7) {
-            return month % 2 == 1 ? 31 : 30;
-        } else return month % 2 == 1 ? 30 : 31;
+            return (month % 2 == 1 ? 31 : 30);
+        } else return (month % 2 == 1 ? 30 : 31);
     }
+    
+
 }
