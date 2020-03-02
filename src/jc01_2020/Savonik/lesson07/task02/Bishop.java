@@ -8,7 +8,8 @@ public class Bishop extends Figure {
 
     @Override
     public boolean moveTo(char toVertical, int toHorizontal) {
-        return (Math.abs(toVertical - vertical) == Math.abs(toHorizontal - horizontal) &&
+        if (toHorizontal==horizontal&&toVertical==vertical) return false;
+        else return (Math.abs(toVertical - vertical) == Math.abs(toHorizontal - horizontal) &&
                 toVertical >= 'a' && toVertical <= 'h' && toHorizontal >= 1 && toHorizontal <= 8);
     }
 }

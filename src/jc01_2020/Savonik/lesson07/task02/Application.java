@@ -19,7 +19,7 @@ public class Application {
 		System.out.println(figure.moveTo('f',4));
 		
 		Figure figure1=new King('b',2);
-		System.out.println(figure1.moveTo('c',2));
+		System.out.println(figure1.moveTo('b',2));
 
 		Figure figure2=new Knight('b',2);
 		System.out.println(figure2.moveTo('c',4));

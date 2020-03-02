@@ -7,7 +7,8 @@ public class Rook extends Figure {
 
     @Override
     public boolean moveTo(char toVertical, int toHorizontal) {
-        return ((toVertical == vertical || toHorizontal == horizontal) &&
+        if (toHorizontal==horizontal&&toVertical==vertical) return false;
+        else return ((toVertical == vertical || toHorizontal == horizontal) &&
                 toVertical >= 'a' && toVertical <= 'h' && toHorizontal >= 1 && toHorizontal <= 8);
     }
 }
