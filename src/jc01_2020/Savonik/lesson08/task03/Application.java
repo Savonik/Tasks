@@ -30,8 +30,8 @@ package jc01_2020.Savonik.lesson08.task03;
 
 public class Application {
     public static void main(String[] args) {
-        Date date1 = new Date(20, 6, 1996);
-        Date date2 = new Date(27, 4, 1993);
+        Date date1 = new Date(20, 2, 2000);
+        Date date2 = new Date(27, 5, 2025);
         System.out.println("День недели-" + date1.getDayOfWeek());
         System.out.println("Год високосный: " + date1.leapYear());
         System.out.println("Количество дней в году: " + date1.getDayOfYear());
@@ -39,7 +39,6 @@ public class Application {
         System.out.println(month1.getDays(9, false));
         System.out.println(Date.daysBetween(date1, date2));
     }
-
 }
 
 
