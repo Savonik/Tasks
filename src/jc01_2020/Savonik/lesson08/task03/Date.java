@@ -8,7 +8,6 @@ public class Date {
         this.day = day;  this.month = month; this.year = year;
         leapYear = new Year().leapYear();
         getDayOfYear = new Year().getDayOfYear();
-        System.out.println("Заданная дата: " + day + "." + month + "." + year);
     }
 
     public int getDay() { return day; }
@@ -31,8 +30,15 @@ public class Date {
     public int getDayOfYear() { return getDayOfYear; }
 
     public static int daysBetween(Date startDate, Date endDate) {
+        if (startDate.getYear()>endDate.getYear()){
+         Date datee;
+         datee = endDate;
+         endDate =startDate;
+         startDate=datee;
+         System.out.print("минус " );
+        }
         int daysBetween = endDate.getDay() - startDate.getDay();
-        for (int i = startDate.getYear(); i <= endDate.getYear(); i++) daysBetween = daysBetween + Date.getDayOfYear(i);
+        { for (int i = startDate.getYear(); i <= endDate.getYear(); i++) daysBetween += getDayOfYear(i);}
         for (int i = 1; i < startDate.getMonth(); i++) daysBetween -= getDays(i);
         for (int i = endDate.getMonth(); i <= 12; i++) daysBetween -= getDays(i);
         return daysBetween;
@@ -56,7 +62,7 @@ public class Date {
     }
 
     static class Day { }
-    
+
     static boolean leapYear(int i) { return ((i % 4 == 0) && (i % 100 != 0)) || (i% 400 == 0); }
     public static int getDayOfYear(int i){
         return leapYear(i)? 366: 365;
