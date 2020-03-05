@@ -4,13 +4,9 @@ package jc01_2020.Savonik.lesson06.task02;
 public class Application {
    public static void main(String[] args) {
       
-      Bancomat bancomat = new Bancomat(1, 1, 1);
+      BancomatNEW bancomat = new BancomatNEW(3, 5, 1);
       System.out.println(bancomat.balance());
-      bancomat.addMoney(2,5,6);
-      System.out.println(bancomat.balance());
-      bancomat.addMoney(2,5,6);
-      System.out.println(bancomat.balance());
-      bancomat.withdraw(50);
+      bancomat.withdraw1(60);
       System.out.println(bancomat.balance());
    }
 }
