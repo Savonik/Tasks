@@ -26,7 +26,7 @@ public class Bancomat {
 
     
     
-    public boolean withdraw(int amount) {
+    public boolean withdraw2(int amount) {
         if (amount > (amount20 * 20 + amount50 * 50 + amount100 * 100)) {
             System.out.println("введите меньшую сумму, в банкомате недостаточно денег");
             return false;
