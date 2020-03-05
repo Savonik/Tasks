@@ -18,13 +18,10 @@ public class Task1 {
 	public static void main(String[] args) {
 		int start = new Random().nextInt(50);
 		System.out.println("start = " + start);
-		IntStream intStream = IntStream.range(start, start + 40); // place code here
-		intStream
-				.filter((i) -> i%2!=0)
+		IntStream.range(start, start + 40)
+				.filter((integer) -> integer%2!=0)
 				.limit(10)
 				.forEach(System.out::println);
-
-
 
 	}
 
