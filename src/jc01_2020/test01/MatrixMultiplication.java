@@ -56,15 +56,55 @@ public class MatrixMultiplication {
 		c = new int[rowsA][columnsB];
 
 		// Заполнить массивы А и В с помощью scanner.nextInt(). Тестовые данные заполняются построчно для каждого массива
+		for (int i = 0; i < rowsA; i++) {
+			for (int j = 0; j < columnsA; j++) {
+				a[j][i] = scanner.nextInt();
+			}
+		}
 
+		for (int i = 0; i < rowsB; i++) {
+			for (int j = 0; j < columnsB; j++) {
+				b[j][i] = scanner.nextInt();
+			}
+		}
+		
 		// Вывести в консоль матрицу А
+		for (int i = 0; i < rowsA; i++) {
+			for (int j = 0; j < columnsA; j++) {
+				System.out.print(a[j][i] +" " );
+			}
+			System.out.println();
+		}
 
 		// Вывести в консоль матрицу В
 
+		for (int i = 0; i < rowsB; i++) {
+			for (int j = 0; j < columnsB; j++) {
+				System.out.print(b[j][i] + " " );
+			}
+			System.out.println();
+		}
+
 		// Перемножить матрицы
+		for (int i = 0; i < rowsA; i++) {
+			for (int j = 0; j < columnsB; j++) {
+				for (int k = 0; k < columnsB; k++) {
+					c[j][i] = a [j][i]*b[j][i] + a [j][k]*b[k][i] +a [j][k]*b[k][i];
+				}
+				
+			}
+		}
 
 		// Вывести результирующую матрицу по одному значению через пробел (порядок вывода - построчно)
 
+		for (int i = 0; i < rowsA; i++) {
+			for (int j = 0; j < columnsB; j++) {
+				System.out.println(c[j][i] + " "); 
+			}
+			System.out.println();
+		}
+
 	}
+	
 
 }
