@@ -89,7 +89,7 @@ public class MatrixMultiplication {
 		for (int i = 0; i < rowsA; i++) {
 			for (int j = 0; j < columnsB; j++) {
 				for (int k = 0; k < columnsB; k++) {
-					c[j][i] = a [j][i]*b[j][i] + a [j][k]*b[k][i] +a [j][k]*b[k][i];
+					c[j][i] = a[j][i]*b[j][i] + a[j][k]*b[k][i] + a[j][k]*b[k][i];
 				}
 				
 			}
