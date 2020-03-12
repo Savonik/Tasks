@@ -10,34 +10,52 @@ package jc01_2020.Savonik.lesson12;
  *
  */
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.stream.IntStream;
+import java.util.*;
+import java.util.stream.Collectors;
 
-import static java.util.stream.IntStream.*;
+
+import static java.lang.System.*;
 
 public class Task3 {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
 		Map<String, String> map = new HashMap<>();
 		
-		map.entrySet()
-				.forEach( i -> map.put(scanner.nextLine(), scanner.nextLine()));
-	
-		// full the map
-		//range(0, 10)
-		//		.mapToObj(i -> scanner.nextLine()).forEachOrdered(str -> {
-			//String str1 = scanner.nextLine();
-			//map.put(str, str1);
-		//});
-		// Заполнить список
+		map.put("Савоник", "Татьяна");
+		map.put("Саливник", "Тоттьяnhugjkilop;['на");
+		map.put("Савоюк", "Атьяна");
+		map.put("Савоник", "Татьяна");
+		map.put("Савоник", "Татьяна");
+		map.put("Савоник", "Татьяна");
+		map.put("Савоник", "Татьяна");
+		map.put("Савоник", "Татьяна");
+		map.put("Савоник", "Татьяна");
+		map.put("Савоник", "Татьяна");
+		map.put("Савоник", "Татьяна");
 
-		System.out.println(map);
-			//List1.add(numeric);
-		//String longName = null; // use map here: longName = map...
-		//System.out.println("longName = " + longName);
+		out.println(map);
+		
+		map.forEach((key, value) -> map.replace(key, key+value));
+
+		Map<String, String> filteredMap = map.entrySet().stream()
+				.filter(i -> i.getValue().length() <=16)
+				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+		out.println(filteredMap);
+		
+		//Integer longName = filteredMap.entrySet()
+		//		.stream().max((entry1, entry2) -> entry1.getValue().length().compareTo(entry2.getValue().length())?);
+		
+		
+		
+		//String longName = "0";
+		//for (Map.Entry<String, String> entry : filteredMap.entrySet())
+		//{if (entry.getValue().length() > longName.length())
+		//	longName = entry.getValue();
+		//}
+					
+				
+		// use map here: longName = map...
+		
+	//out.println("longName = " + longName);
 	}
 	
 }

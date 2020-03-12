@@ -23,8 +23,8 @@ public class Task5 {
 					StringArray[j] = ' ';
 				}
 		}
-		String valueOfchar = String.valueOf(StringArray);
-		String str1 = valueOfchar.replaceAll(" ","");
+		String valueOfChar = String.valueOf(StringArray);
+		String str1 = valueOfChar.replaceAll(" ","");
 		System.out.println(str1);
 	}
 }

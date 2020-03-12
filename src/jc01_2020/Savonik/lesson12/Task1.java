@@ -22,7 +22,6 @@ public class Task1 {
 				.filter((integer) -> integer%2!=0)
 				.limit(10)
 				.forEach(System.out::println);
-
 	}
 
 }

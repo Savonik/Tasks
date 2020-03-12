@@ -37,7 +37,7 @@ public class Date {
          startDate=datee;
          System.out.print("минус " );
         }
-        int daysBetween = endDate.getDay() - startDate.getDay();
+        int daysBetween = endDate.getDay()-1 - startDate.getDay();
         { for (int i = startDate.getYear(); i <= endDate.getYear(); i++) daysBetween += getDayOfYear(i);}
         for (int i = 1; i < startDate.getMonth(); i++) daysBetween -= getDays(i);
         for (int i = endDate.getMonth(); i <= 12; i++) daysBetween -= getDays(i);
@@ -49,7 +49,7 @@ public class Date {
             return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
         }
 
-        public int getDayOfYear() { return leapYear()? 366:365; }
+        public int getDayOfYear() {return leapYear()? 366:365;}
     }
 
     static class Month {

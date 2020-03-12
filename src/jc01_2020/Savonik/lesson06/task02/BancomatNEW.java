@@ -25,7 +25,7 @@ public class BancomatNEW {
         return amount20 * 20 + amount50 * 50 + amount100 * 100;
     }
 
-    private void addMoney(int amount20, int amount50, int amount100) {
+    public void addMoney(int amount20, int amount50, int amount100) {
         BancomatNEW.amount20 += amount20;
         BancomatNEW.amount50 += amount50;
         BancomatNEW.amount100 += amount100;

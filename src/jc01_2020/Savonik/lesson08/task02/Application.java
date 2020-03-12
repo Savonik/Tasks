@@ -24,9 +24,9 @@ public class Application {
 	static <T> T[] filter(Object[] objects, Filter filter) {
 		List<T> result = new ArrayList<>();
 		for (Object object : objects) {
-			if (filter.apply(object)) result.add((T) object);
+			if (filter.apply(object)) result.add((T)object);
 		}
-		return (T[]) result.toArray();
+		return (T[])result.toArray();
 	}
 
 	public static void main(String[] args) {

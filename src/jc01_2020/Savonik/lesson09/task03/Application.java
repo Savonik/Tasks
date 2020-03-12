@@ -26,6 +26,7 @@ public class Application {
 		List1.addFirst(List1.getLast()); List1.removeLast();
 		List1.addFirst(List1.getLast()); List1.removeLast();
 		List1.addFirst(List1.getLast()); List1.removeLast();
+		
 		System.out.println("List1 = " + List1);
 	}
 

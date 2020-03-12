@@ -30,8 +30,8 @@ package jc01_2020.Savonik.lesson08.task03;
 
 public class Application {
     public static void main(String[] args) {
-        Date date1 = new Date(30, 5, 2020);
-        Date date2 = new Date(29, 5, 2015);
+        Date date1 = new Date(30, 1, 2020);
+        Date date2 = new Date(1, 2, 2040);
         System.out.println("День недели-" + date1.getDayOfWeek());
         System.out.println("Год високосный: " + date1.leapYear());
         System.out.println("Количество дней в году: " + date1.getDayOfYear());
