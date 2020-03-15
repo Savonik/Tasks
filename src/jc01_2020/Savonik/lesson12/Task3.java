@@ -12,27 +12,23 @@ package jc01_2020.Savonik.lesson12;
 
 import java.util.*;
 import java.util.stream.Collectors;
-
-
 import static java.lang.System.*;
 
 public class Task3 {
 	public static void main(String[] args) {
 		Map<String, String> map = new HashMap<>();
-		
-		map.put("Савоник", "Татьяна");
-		map.put("Саливник", "Тоттьяnhugjkilop;['на");
-		map.put("Савоюк", "Атьяна");
-		map.put("Савоник", "Татьяна");
-		map.put("Савоник", "Татьяна");
-		map.put("Савоник", "Татьяна");
-		map.put("Савоник", "Татьяна");
-		map.put("Савоник", "Татьяна");
-		map.put("Савоник", "Татьяна");
-		map.put("Савоник", "Татьяна");
-		map.put("Савоник", "Татьяна");
 
-		out.println(map);
+		map.put("Арнери", "Альфреда");
+		map.put("Карпова", "Беатриса");
+		map.put("Эйнштейн", "Айгуль");
+		map.put("Тесла", "Аврора");
+		map.put("Фаренгейт", "Агнесса");
+		map.put("Ньютон", "Исидора");
+		map.put("Максвелл", "Шарлотта");
+		map.put("Ампер", "Леокадия");
+		map.put("Хокинг", "Капитолина");
+		map.put("Рентген", "Бронислава");
+		map.put("Сахарова", "Александра");
 		
 		map.forEach((key, value) -> map.replace(key, key+value));
 
@@ -40,22 +36,10 @@ public class Task3 {
 				.filter(i -> i.getValue().length() <=16)
 				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 		out.println(filteredMap);
-		
-		//Integer longName = filteredMap.entrySet()
-		//		.stream().max((entry1, entry2) -> entry1.getValue().length().compareTo(entry2.getValue().length())?);
-		
-		
-		
-		//String longName = "0";
-		//for (Map.Entry<String, String> entry : filteredMap.entrySet())
-		//{if (entry.getValue().length() > longName.length())
-		//	longName = entry.getValue();
-		//}
-					
-				
-		// use map here: longName = map...
-		
-	//out.println("longName = " + longName);
+
+		String longName = Objects.requireNonNull(filteredMap.entrySet().stream()
+				.max(Comparator.comparingInt(entry -> entry.getValue().length())).orElse(null)).getValue();
+
+		System.out.println("longName = " + longName);
 	}
-	
 }
