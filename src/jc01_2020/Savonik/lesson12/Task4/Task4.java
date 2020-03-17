@@ -1,4 +1,4 @@
-package jc01_2020.Savonik.lesson12;
+package jc01_2020.Savonik.lesson12.Task4;
 
 /*
  *
