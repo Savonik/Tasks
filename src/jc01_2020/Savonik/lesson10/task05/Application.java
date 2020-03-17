@@ -25,7 +25,7 @@ public class Application {
                 String buyer = scanner.nextLine();
                 String ship = scanner.nextLine();
                 String amount = scanner.nextLine();
-                map.put(buyer, new ArrayList<>(Arrays.asList(ship, amount)));
+                map.put(buyer, Arrays.asList(ship, amount));
             }
         }
 
@@ -34,6 +34,6 @@ public class Application {
 			System.out.println(entry.getValue().get(0)+" - "+entry.getValue().get(1));
 			}
         
-    }
+    } 
 
 }

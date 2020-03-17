@@ -10,6 +10,9 @@ public class QuickSort {
     public static void main(String[] args) {
         boolean sorted = false;
     int [] numbers =  {14,5,7,101,4,19};
+    
+                
+      
     //сортировка пузырьком
         /*
         while (!sorted){
@@ -39,8 +42,8 @@ public class QuickSort {
 */
 
         System.out.println(Arrays.toString(numbers));
-        
-        
+
+       
         
     }
 }

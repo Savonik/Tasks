@@ -8,6 +8,11 @@ package jc01_2020.Savonik.lesson12;
  */
 
 public class Task5 {
+
+	@FunctionalInterface
+	interface CompareLife {
+		Cat compareLife(Cat kotik1, Cat kotik2);
+	}
 	public static void main(String[] args) {
 		Cat kotenok = new Cat("Kotenok", 5);
 		Cat kotenochek = new Cat("Kotenochek", 6);
@@ -18,7 +23,6 @@ public class Task5 {
 			} else return (cat1.getLifeAmount()>cat2.getLifeAmount()? cat1:cat2);});
 		
 		System.out.println(compared.compareLife(kotenok, kotenochek).getName());
-		
 	}
 	
 	public static class Cat {
@@ -39,11 +43,6 @@ public class Task5 {
 		}
 
 	}
-
 	
-	@FunctionalInterface
-	interface CompareLife {
-		Cat compareLife(Cat kotik1, Cat kotik2);
-	}
 
 }

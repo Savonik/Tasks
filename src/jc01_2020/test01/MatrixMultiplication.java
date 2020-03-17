@@ -88,7 +88,7 @@ public class MatrixMultiplication {
 		// Перемножить матрицы
 		for (int i = 0; i < rowsA; i++) {
 			for (int j = 0; j < columnsB; j++) {
-				for (int k = 0; k < columnsB; k++) {
+				for (int k = 0; k < columnsA; k++) {
 					c[i][j] += a[i][k]*b[k][j];
 				}
 				
@@ -98,11 +98,11 @@ public class MatrixMultiplication {
 	
 		// Вывести результирующую матрицу по одному значению через пробел (порядок вывода - построчно)
 
-		for (int i = 0; i < rowsA; i++) {
-			for (int j = 0; j < columnsB; j++) {
-				System.out.print(c[j][i] + " "); 
+
+			for (int i = 0; i < rowsA; i++) {
+				for (int j = 0; j < columnsB; j++) {
+				System.out.print(c[i][j] + " "); 
 			}
-			System.out.println();
 		}
 
 	}

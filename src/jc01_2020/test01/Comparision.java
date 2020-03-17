@@ -9,7 +9,6 @@ package jc01_2020.test01;
  *
  */
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Comparision {

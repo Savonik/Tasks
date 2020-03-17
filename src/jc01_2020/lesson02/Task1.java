@@ -20,5 +20,7 @@ public class Task1 {
 		Scanner scanner = new Scanner(System.in);
 		int numeric = scanner.nextInt();
 		int a;
+	
+
 	}
 }
