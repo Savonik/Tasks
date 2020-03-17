@@ -1,30 +1,31 @@
 package jc01_2020.Savonik.lesson12.Task4;
 
-import java.util.EnumSet;
-import java.util.Random;
-import java.util.Set;
-
 public class Car {
-    Color color;
-   
 
-    enum Color {blue, red, yellow, green, dark}
-    
-    Car (Color color){
-        this.color=color;
+    private String colored;
+    private Color color;
+
+    public Car(Color color) {
+        this.color = color;
     }
-    
-    public static void main(String[] args) {
-        
-      
-        Set<Color> colorSet = null;
-        for (int i = 0; i < 50; i++) {
-           colorSet = EnumSet.allOf(Color.class);
-        }
-      
-        System.out.println(colorSet);  
+
+    public String getColored() {
+        return colored;
     }
-          
-  
+
+    public void setColored(String colored) {
+        this.colored = colored;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+
+
 }
 

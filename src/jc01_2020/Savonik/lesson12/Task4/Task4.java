@@ -13,8 +13,24 @@ package jc01_2020.Savonik.lesson12.Task4;
  *
  */
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
+
 public class Task4 {
 	public static void main(String[] args) {
-
+		Random random = new Random();
+		List<Car> garage = new ArrayList<>();
+		for (int i = 0; i < 50; i++) {
+			garage.add(new Car(Color.values()[random.nextInt(5)]));
+		}
+		String string = garage.stream()
+				.peek(car -> car.setColored(car.getColor().getColor()))
+				.limit(10)
+				.filter(car -> car.getColor() == Color.values()[Color.values().length - 1])
+				.peek(car -> System.out.println(car.getColor()))
+				.map(Car::getColored)
+				.collect(Collectors.joining(" "));
 	}
 }
