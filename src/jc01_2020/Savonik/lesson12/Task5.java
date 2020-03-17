@@ -15,14 +15,18 @@ public class Task5 {
 	}
 	public static void main(String[] args) {
 		Cat kotenok = new Cat("Kotenok", 5);
-		Cat kotenochek = new Cat("Kotenochek", 6);
+		Cat kotenochek = new Cat("Kotenochek", 5);
 		
-		CompareLife compared = ((cat1, cat2) -> {
-			if (cat1.getLifeAmount()>cat2.getLifeAmount()) {
-				System.out.println("Равно"); return null;
-			} else return (cat1.getLifeAmount()>cat2.getLifeAmount()? cat1:cat2);});
-		
-		System.out.println(compared.compareLife(kotenok, kotenochek).getName());
+		CompareLife compared = (cat1, cat2) -> {
+			if (cat1.getLifeAmount()==cat2.getLifeAmount()) {
+				return null;
+			} else
+				return (cat1.getLifeAmount()>cat2.getLifeAmount()? cat1:cat2);};
+		try {
+			System.out.println(compared.compareLife(kotenok, kotenochek).getName());	
+		} catch (NullPointerException e){
+			System.out.println("Количество жизней совпадает");
+		}
 	}
 	
 	public static class Cat {
@@ -41,8 +45,5 @@ public class Task5 {
 		public int getLifeAmount() {
 			return lifeAmount;
 		}
-
 	}
-	
-
 }
