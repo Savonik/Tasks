@@ -32,5 +32,7 @@ public class Task4 {
 				.peek(car -> System.out.println(car.getColor()))
 				.map(Car::getColored)
 				.collect(Collectors.joining(" "));
+
+		System.out.println(string.length()!=0);
 	}
 }
