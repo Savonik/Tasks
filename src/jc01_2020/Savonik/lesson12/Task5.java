@@ -10,7 +10,7 @@ package jc01_2020.Savonik.lesson12;
 public class Task5 {
 
 	@FunctionalInterface
-	interface CompareLife {
+	private interface CompareLife {
 		Cat compareLife(Cat kotik1, Cat kotik2);
 	}
 	public static void main(String[] args) {
