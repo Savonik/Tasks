@@ -11,7 +11,6 @@ package jc01_2020.Savonik.lesson12;
  */
 
 import java.util.*;
-import java.util.stream.Collectors;
 import static java.lang.System.*;
 
 public class Task3 {
@@ -23,23 +22,19 @@ public class Task3 {
 		map.put("Эйнштейн", "Айгуль");
 		map.put("Тесла", "Аврора");
 		map.put("Фаренгейт", "Агнесса");
-		map.put("Ньютон", "Исидора");
-		map.put("Максвелл", "Шарлотта");
+		map.put("Ньютон", "Исидорочка");
+		map.put("Максвелл", "Шарлоттушка");
 		map.put("Ампер", "Леокадия");
 		map.put("Хокинг", "Капитолина");
 		map.put("Рентген", "Бронислава");
 		map.put("Сахарова", "Александра");
-		
-		map.forEach((key, value) -> map.replace(key, key+value));
 
-		Map<String, String> filteredMap = map.entrySet().stream()
-				.filter(i -> i.getValue().length() <=16)
-				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-		out.println(filteredMap);
+	String longName = Objects.requireNonNull(map.entrySet().stream()
+			.peek(i -> out.println(i.getValue()))
+			.peek(i -> i.setValue(i.getValue() + i.getKey()))
+			.filter(i -> i.getValue().length() <= 16)
+			.max(Comparator.comparingInt(i -> i.getValue().length())).orElse(null)).getValue();
 
-		String longName = Objects.requireNonNull(filteredMap.entrySet().stream()
-				.max(Comparator.comparingInt(entry -> entry.getValue().length())).orElse(null)).getValue();
-
-		System.out.println("longName = " + longName);
+		out.println("LongName = " + longName);
 	}
 }
