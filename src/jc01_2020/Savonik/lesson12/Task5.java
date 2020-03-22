@@ -11,22 +11,19 @@ public class Task5 {
 
 	@FunctionalInterface
 	private interface CompareLife {
-		Cat compareLife(Cat kotik1, Cat kotik2);
+		String compareLife(Cat kotik1, Cat kotik2);
 	}
 	public static void main(String[] args) {
 		Cat kotenok = new Cat("Kotenok", 5);
 		Cat kotenochek = new Cat("Kotenochek", 5);
 		
 		CompareLife compared = (cat1, cat2) -> {
-			if (cat1.getLifeAmount()==cat2.getLifeAmount()) {
-				return null;
-			} else
-				return (cat1.getLifeAmount()>cat2.getLifeAmount()? cat1:cat2);};
-		try {
-			System.out.println(compared.compareLife(kotenok, kotenochek).getName());	
-		} catch (NullPointerException e){
-			System.out.println("Количество жизней совпадает");
-		}
+			if (cat1.getLifeAmount()==cat2.getLifeAmount()) { return "количество жизней равно"; } 
+			else
+				return (cat1.getLifeAmount()>cat2.getLifeAmount()? cat1.getName():cat2.getName());
+		};
+		
+			System.out.println(compared.compareLife(kotenok, kotenochek));
 	}
 	
 	public static class Cat {
