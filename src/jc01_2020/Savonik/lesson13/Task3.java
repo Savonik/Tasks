@@ -13,6 +13,8 @@ package jc01_2020.Savonik.lesson13;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
+
 import static java.lang.Integer.*;
 import static java.lang.String.format;
 import static java.time.LocalDate.now;
@@ -21,11 +23,12 @@ import static java.time.LocalDate.of;
 
 public class Task3 {
 	public static void main(String[] args) {
-	addPerson("Иван", "27/4/1993");
+	addPerson("Иван", "12/2/1993");
 	addPerson("Марьян", "20/8/1991");
 	addPerson("Сергей", "30/1/1990");
 	
 	daysBeforePerson("Иван");
+	daysBeforePerson("Сергей");
 	daysBeforeAll();
 	
 	}
@@ -39,7 +42,7 @@ public class Task3 {
 
 	public static void daysBeforeAll() {
 		int daysBefore;
-		for (Map.Entry<String, LocalDate> entry : map.entrySet()) {
+		for (Entry<String, LocalDate> entry : map.entrySet()) {
 			if (entry.getValue().getDayOfYear() - LocalDate.now().getDayOfYear() > 0) {
 				daysBefore = entry.getValue().withYear(now().getYear()).getDayOfYear() - LocalDate.now().getDayOfYear();
 			} else

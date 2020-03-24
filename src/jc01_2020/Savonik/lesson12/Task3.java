@@ -17,24 +17,24 @@ public class Task3 {
 	public static void main(String[] args) {
 		Map<String, String> map = new HashMap<>();
 
-		map.put("Арнери", "Альфреда");
-		map.put("Карпова", "Беатриса");
-		map.put("Эйнштейн", "Айгуль");
-		map.put("Тесла", "Аврора");
-		map.put("Фаренгейт", "Агнесса");
-		map.put("Ньютон", "Исидорочка");
-		map.put("Максвелл", "Шарлоттушка");
-		map.put("Ампер", "Леокадия");
-		map.put("Хокинг", "Капитолина");
-		map.put("Рентген", "Бронислава");
-		map.put("Сахарова", "Александра");
+		map.put("Арнери", "Альфреппппппппппппппппппппппппппда");
+		map.put("Карпова", "Беатпппппппппппппппппппприса");
+		map.put("Эйнштейн", "Айппппппппппппппппппппгуль");
+		map.put("Тесла", "Аврорпппппппппппппппппппа");
+		map.put("Фаренгейт", "Агпппппппппппппппппппнесса");
+		map.put("Ньютон", "Исппппппппппппппппппппппппппа");
+		map.put("Максвелл", "Шппппппка");
+		map.put("Ампер", "Леокадирря");
+		map.put("Хокинг", "Капитолрррррррпппппппппппппррррррина");
+		map.put("Рент", "Брониррррррррррппппппппппппппрслава");
+		map.put("Сахарова", "Алексапппппппппппндра");
 
-	String longName = Objects.requireNonNull(map.entrySet().stream()
+	map.entrySet().stream()
 			.peek(i -> out.println(i.getValue()))
 			.peek(i -> i.setValue(i.getValue() + i.getKey()))
 			.filter(i -> i.getValue().length() <= 16)
-			.max(Comparator.comparingInt(i -> i.getValue().length())).orElse(null)).getValue();
+			.max(Comparator.comparingInt(i -> i.getValue().length())).ifPresent(out::println);
 
-		out.println("LongName = " + longName);
+		
 	}
 }

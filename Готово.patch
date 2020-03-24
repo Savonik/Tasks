@@ -1,0 +1,15 @@
+Index: src/jc01_2020/Savonik/lesson13/Task3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/jc01_2020/Savonik/lesson13/Task3.java	(revision 8a33669ac2842503e4e62b782d8aeaef0de9bf6b)
++++ src/jc01_2020/Savonik/lesson13/Task3.java	(date 1585066724277)
+@@ -26,6 +26,7 @@
+ 	addPerson("Сергей", "30/1/1990");
+ 	
+ 	daysBeforePerson("Иван");
++	daysBeforePerson("Сергей");
+ 	daysBeforeAll();
+ 	
+ 	}
