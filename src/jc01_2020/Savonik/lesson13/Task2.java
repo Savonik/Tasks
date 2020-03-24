@@ -7,8 +7,27 @@ package jc01_2020.Savonik.lesson13;
  *
  */
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class Task2 {
 	public static void main(String[] args) {
+		Random random = new Random();
+		ZonedDateTime nowTime = ZonedDateTime.of(LocalDate.now(), LocalTime.now(), ZoneId.of("Europe/Minsk"));
+		System.out.println("nowTime = " + nowTime);
+
+		List<String> zoneIds = new ArrayList<>(ZoneId.getAvailableZoneIds());
+		for (int i = 0; i < 10; i++) {
+			System.out.println(nowTime.withZoneSameInstant(ZoneId.of(zoneIds.get(random.nextInt(zoneIds.size()+1)))));
+		}
+
+
+
 
 	}
 }
