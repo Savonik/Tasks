@@ -8,17 +8,24 @@ package jc01_2020.Savonik.lesson14.task01;
  *
  */
 
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
+
 public class Application {
 
-	public static void main(String[] args) throws IOException {
-		FileWriter writer = new FileWriter("src\\jc01_2020\\Savonik\\lesson14\\resource\\lesson14-01.txt");
-		writer.write("Давай проверим, что мы умеем писать в файл");
+	public static void main(String[] args){
+		try { 
+			
+			FileWriter writer = new FileWriter("src\\jc01_2020\\Savonik\\lesson14\\resource\\lesson14-01.txt");
+		writer.write("Давай проверим, что мы умеем писать в файл.");
 		writer.write("\n");
-		writer.write("Поехали");
+		writer.write("Поехали!");
 		writer.close();
+		
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-
 }
