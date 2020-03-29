@@ -8,7 +8,6 @@ package jc01_2020.Savonik.lesson14.task01;
  *
  */
 
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
