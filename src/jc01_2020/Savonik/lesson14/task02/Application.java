@@ -36,7 +36,7 @@ public class Application {
 			
 		} catch (IOException e) { System.out.println(e.getMessage()); }
 		
-		System.out.println("Равны ли строки? It is " + s1.toString().equals(s2.toString()));
+		System.out.println("Strings are equals? It is " + s1.toString().equals(s2.toString()));
 
 	}
 }
