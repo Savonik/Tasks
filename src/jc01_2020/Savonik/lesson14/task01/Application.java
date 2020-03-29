@@ -19,7 +19,7 @@ public class Application {
 		try { 
 			
 			FileWriter writer = new FileWriter("src\\jc01_2020\\Savonik\\lesson14\\resource\\lesson14-01.txt");
-		writer.write("Давай проверим, что мы умеем писать в файл.");
+		writer.write("Hello проверим, что мы умеем писать в файл.");
 		writer.write("\n");
 		writer.write("Поехали!");
 		writer.close();
