@@ -24,7 +24,7 @@ public class Application {
 			System.out.println(s1);
 			reader.close();
 			
-		} catch (IOException e) { System.out.println(e.getMessage()); }
+		} catch (IOException e) { e.printStackTrace(); }
 		
 		try {
 			FileInputStream fis = new FileInputStream("src\\jc01_2020\\Savonik\\lesson14\\resource\\lesson14-01.txt");
@@ -34,7 +34,7 @@ public class Application {
 			iR.close();
 			System.out.println(s2);
 			
-		} catch (IOException e) { System.out.println(e.getMessage()); }
+		} catch (IOException e) { e.printStackTrace(); }
 		
 		System.out.println("Strings are equals? It is " + s1.toString().equals(s2.toString()));
 
