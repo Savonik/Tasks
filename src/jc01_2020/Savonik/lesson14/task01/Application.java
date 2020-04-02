@@ -23,8 +23,6 @@ public class Application {
 		writer.write("Поехали!");
 		writer.close();
 		
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		} catch (IOException e) { e.printStackTrace(); }
 	}
 }
