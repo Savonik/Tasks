@@ -8,21 +8,40 @@ package jc01_2020.Savonik.lesson16;
 *
 */
 
+import java.awt.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Main {
-
+    
     public static void main(String[] args) {
-        Player player1 = new Player();
-        Player player2 = new Player();
-
-        Table table = new Table();
-
+        
+        Player player1 = new Player('0');
+        Player player2 = new Player('x');
+        
         ExecutorService service = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-        service.execute(player1);
-        service.execute(player2);
-
+        for (int i = 0; i < 20 ; i++) {
+           
+            if (Table.isWin()){
+                Table.printWin();
+              break;
+            }
+            else {
+                service.execute(player1);
+                if (Table.isWin()) {
+                    Table.printWin();
+                    break;
+                }
+                else service.execute(player2);
+            }
+       }
+        
+   if (!Table.isWin()){
+       System.out.println("DRAW");
+   }
+            service.shutdown();
+            Table.print();
+            
     }
 
 }
