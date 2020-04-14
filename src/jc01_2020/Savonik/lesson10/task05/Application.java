@@ -26,6 +26,8 @@ public class Application {
                 String ship = scanner.nextLine();
                 String amount = scanner.nextLine();
                 map.put(buyer, Arrays.asList(ship, amount));
+                
+                
             }
         }
 

@@ -28,11 +28,14 @@ import jc01_2020.test02.Reward;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.sql.ClientInfoStatus;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -46,11 +49,12 @@ public class Main {
         int i = Period.between(employee.getStartDate(), employee.getEndDate()).getDays();
         employee.setWorkPeriod(i);
 
-       List <Reward> list = Helper.getRewards();
-        list.forEach(reward-> reward.setName(reward.getDate().toString()+reward.getName()));
-        
-        
+       List <Reward> list = employee.getRewards().stream().peek(reward-> reward.setName(reward.getDate().toString()+reward.getName())).sorted(Comparator.comparing(Reward::getDate))
+                .collect(Collectors.toList());
+       
+       employee.setRewards(list);
         }
+        
         
         
     public static Employee getEmployee() {
