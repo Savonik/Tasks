@@ -17,15 +17,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Task1 {
+
     public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		String str = scanner.next();
-		String regexp = "^[A-Za-z_]{1}+[\\w]+[\\w]$";
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.next();
+        String regexp = "^[A-Za-z_]{1}+[\\w]+[\\w]$";
         Pattern p = Pattern.compile(regexp);
         Matcher matcher = p.matcher(str);
-        if (matcher.find()){
-        System.out.println("Да");
-        }
-        else System.out.println("Нет");
+
+        if (matcher.find()) {
+            System.out.println("Да");
+        } else System.out.println("Нет");
     }
 }

@@ -18,17 +18,18 @@ package jc01_2020.Savonik.lesson05;
 import java.util.Scanner;
 
 public class Task4 {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		String string = scanner.nextLine();
-		string = string.replaceAll("[^0-9]+"," ");
-		string = string.trim();
-		String[] str = string.split(" ");
-		int [] integ = new int [str.length];
-		for (int i = 0; i < str.length; i++) {
-			integ[i] = Integer.parseInt(str[i]);
-			System.out.println(integ[i]);
-		}
-	
-	}
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+
+        string = string.replaceAll("[^0-9]+", " ");
+        string = string.trim();
+        String[] str = string.split(" ");
+        int[] integ = new int[str.length];
+
+        for (int i = 0; i < str.length; i++) {
+            integ[i] = Integer.parseInt(str[i]);
+            System.out.println(integ[i]);
+        }
+    }
 }

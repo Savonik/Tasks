@@ -15,33 +15,32 @@ package jc01_2020.Savonik.lesson04;
 import java.util.Scanner;
 
 public class TaskB2 {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		int[][] array = new int[4][3];
-		for (int i = 0; i < array[0].length; i++) {
-			for (int j = 0; j < array.length; j++) {
-				array[j][i] = scanner.nextInt();
-			}
-		}
-		
-		int min=array[0][0];
-		for (int i = 0; i < array[0].length; i++)  {
-			for (int j = 0; j < array.length; j++) {
-				if (array[j][i] <= min) {
-				min = array[j][i];
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[][] array = new int[4][3];
+
+        for (int i = 0; i < array[0].length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                array[j][i] = scanner.nextInt();
+            }
+        }
+
+        int min = array[0][0];
+        for (int i = 0; i < array[0].length; i++) {
+			for (int[] ints : array) {
+				if (ints[i] <= min) {
+					min = ints[i];
 				}
 			}
-			}
-		for (int i = 0; i < array[0].length; i++) {
-			for (int j = 0; j < array.length; j++) {
-				if (array[j][i] == min) {
-					System.out.println("строка: " + i + ", столбец: " + j);
-				}
-			}
-		}
-		
-		
-		
-		
-	}
+        }
+
+        for (int i = 0; i < array[0].length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (array[j][i] == min) {
+                    System.out.println("строка: " + i + ", столбец: " + j);
+                }
+            }
+        }
+    }
 }

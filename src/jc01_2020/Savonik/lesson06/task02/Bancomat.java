@@ -24,21 +24,16 @@ public class Bancomat {
         this.amount100 += amount100;
     }
 
-    
-    
+
     public boolean withdraw2(int amount) {
         if (amount > (amount20 * 20 + amount50 * 50 + amount100 * 100)) {
             System.out.println("введите меньшую сумму, в банкомате недостаточно денег");
             return false;
-            
-        } else if ((amount % 10) > 0 && amount<20) {
+
+        } else if ((amount % 10) > 0 && amount < 20) {
             System.out.println("банкомат выдает купюры только номиналом 20, 50, 100");
             return false;
-        } 
-        
-        
-        
-        else {
+        } else {
             int am100 = 0;
             int am50 = 0;
             int am20 = 0;
@@ -60,14 +55,6 @@ public class Bancomat {
             }
             System.out.println("кол-во 100: " + am100 + "  кол-во 50:" + am50 + "  кол-во 20:" + am20);
             return true;
-            
-            
-            
         }
-        
-        
-      
-
     }
-
 }

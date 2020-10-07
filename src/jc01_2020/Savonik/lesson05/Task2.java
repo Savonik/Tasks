@@ -16,19 +16,18 @@ import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		String str = scanner.nextLine();
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
         String string;
         string = str.replaceAll("\\s+", "");
         char[] StringArray = string.toCharArray();
-        for(int i = 0, j = string.length() - 1; i < string.length()/2; i++, j--)
-          {
-              if (StringArray[i]!=StringArray[j]) {
+
+        for (int i = 0, j = string.length() - 1; i < string.length() / 2; i++, j--) {
+            if (StringArray[i] != StringArray[j]) {
                 System.out.println("Нет");
                 break;
-              }
-          }
+            }
+        }
         System.out.println("Да");
     }
-    
 }

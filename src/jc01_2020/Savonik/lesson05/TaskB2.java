@@ -22,10 +22,12 @@ public class TaskB2 {
         String regexp = ("^[a-zA-Z]+[-]+[a-zA-Z]+$|^[А-Яа-я]+[-]+[А-Яа-я]+$");
         Pattern pattern = Pattern.compile(regexp);
         Matcher matcher = pattern.matcher(str);
-        if (matcher.find()){
-        result = true;
-        System.out.println(result);
+
+        if (matcher.find()) {
+            result = true;
+            System.out.println(result);
+        } else {
+            System.out.println(result);
         }
-        else System.out.println(result);
     }
 }

@@ -15,26 +15,30 @@ package jc01_2020.Savonik.lesson04;
 import java.util.Scanner;
 
 public class Task5 {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		int[][] array = new int[4][3];
-		for (int i = 0; i < array[0].length; i++) {
-			for (int j = 0; j < array.length; j++) {
-				array[j][i] = scanner.nextInt();
-			}
-		}
-		    int max=0;
-		    int m = 1;
-			for (int j = 0; j < array.length; j++) {
-				int sum = 0;
-				for (int i = 0; i < array[0].length; i++){
-				sum = sum + array[j][i];
-				}
-				if (sum>=max) {
-					max=sum; m=j;}
-			    }
 
-		System.out.println(m);
-		
-	}
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[][] array = new int[4][3];
+
+        for (int i = 0; i < array[0].length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                array[j][i] = scanner.nextInt();
+            }
+        }
+
+        int max = 0;
+        int m = 1;
+        for (int j = 0; j < array.length; j++) {
+            int sum = 0;
+            for (int i = 0; i < array[0].length; i++) {
+                sum = sum + array[j][i];
+            }
+            if (sum >= max) {
+                max = sum;
+                m = j;
+            }
+        }
+
+        System.out.println(m);
+    }
 }
