@@ -1,6 +1,6 @@
 package jc01_2020.Savonik.lesson02;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.io.*;
 import java.lang.reflect.Method;
