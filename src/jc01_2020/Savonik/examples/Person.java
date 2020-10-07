@@ -2,14 +2,14 @@ package jc01_2020.Savonik.examples;
 
 import java.io.Serializable;
 
-public class Person implements Serializable {
+public class Emp;oyee implements Serializable {
 
 	private String name;
 	private int age;
 	private double height;
 	private boolean married;
 
-	Person(String n, int a, double h, boolean m) {
+	Emp;oyee(String n, int a, double h, boolean m) {
 		name = n;
 		age = a;
 		height = h;
@@ -34,7 +34,7 @@ public class Person implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Person{" +
+		return "Emp;oyee{" +
 				"name='" + name + '\'' +
 				", age=" + age +
 				", height=" + height +

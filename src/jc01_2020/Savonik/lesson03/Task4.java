@@ -12,13 +12,16 @@ package jc01_2020.Savonik.lesson03;
 import java.util.Scanner;
 
 public class Task4 {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		int numeric = scanner.nextInt();
-		int factorial = 1;
-		for (int i=1; i<=numeric; i++){
-			factorial = factorial * i; 
-		}
-		System.out.println("factorial = " + factorial);
-	}
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numeric = scanner.nextInt();
+        int factorial = 1;
+
+        for (int i = 1; i <= numeric; i++) {
+            factorial = factorial * i;
+        }
+
+        System.out.println("factorial = " + factorial);
+    }
 }

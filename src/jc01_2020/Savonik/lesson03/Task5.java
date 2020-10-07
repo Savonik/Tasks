@@ -12,19 +12,23 @@ package jc01_2020.Savonik.lesson03;
  */
 
 public class Task5 {
-	public static void main(String[] args) {
-		
-			for (int n=2;n<10001;n++) {
-				int sum=1;
-				for (int k=2;k<n;k++) {
-					if (n%k==0) {
-				     sum=sum+k;
-					}
-				}
-				if (n==sum)
-					System.out.println(n);		
-			}
-	}
+
+    public static void main(String[] args) {
+
+        for (int n = 2; n < 10001; n++) {
+            int sum = 1;
+
+            for (int k = 2; k < n; k++) {
+                if (n % k == 0) {
+                    sum = sum + k;
+                }
+            }
+
+            if (n == sum) {
+                System.out.println(n);
+            }
+        }
+    }
 
 }
 			

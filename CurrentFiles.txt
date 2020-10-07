@@ -1,0 +1,10 @@
+.git directory
+.gitignore file
+.idea directory
+CurrentFiles.txt file
+out directory
+README.md file
+resource directory
+src directory
+Tasks.iml file
+Готово.patch file

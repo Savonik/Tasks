@@ -14,28 +14,25 @@ package jc01_2020.Savonik.lesson03;
 import java.util.Scanner;
 
 public class Task2 {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		
-		int secret = (int) (Math.random() * 100 + 1);
-		int i;
-		for (i = 1; i<11; i++){
-			int input = scanner.nextInt();
-			if (input>secret) {
-				System.out.println("попытка " +i+ " не удалась, загаданное число меньше, чем введённое");
-			} else if (input<secret){
-				System.out.println("попытка " +i+ " не удалась, загаданное число больше, чем введённое");
-			}
-			else {
-				System.out.println("Ура! Число угадано)))))");
-				break;
-			}
-			
-			}
-		if (i==11) {System.out.println("число попыток исчерпано, secret = " + secret);}
-		}
-		
-		
-		
-	}
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int secret = (int) (Math.random() * 100 + 1);
+        int i;
+
+        for (i = 1; i < 11; i++) {
+            int input = scanner.nextInt();
+            if (input > secret) {
+                System.out.println("попытка " + i + " не удалась, загаданное число меньше, чем введённое");
+            } else if (input < secret) {
+                System.out.println("попытка " + i + " не удалась, загаданное число больше, чем введённое");
+            } else {
+                System.out.println("Ура! Число угадано)))))");
+                return;
+            }
+        }
+
+        System.out.println("число попыток исчерпано, secret = " + secret);
+    }
+}
 

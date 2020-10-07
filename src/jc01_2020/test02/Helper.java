@@ -18,7 +18,7 @@ public class Helper {
         return cook;
     }
 
-    private static List<Reward> getRewards() {
+    public static List<Reward> getRewards() {
         return new ArrayList<>(Arrays.asList(
                 new Reward(LocalDate.of(2015, 4, 10), "Мастер-шеф завтраков"),
                 new Reward(LocalDate.of(209, 7, 7), "Мишленовская звезда"),

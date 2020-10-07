@@ -9,14 +9,14 @@ package jc01_2020.Savonik.lesson03;
  */
 
 public class Task8 {
-	public static void main(String[] args) {
-		int i,k;
-		for (i=1; i<10; i++){
-			for (k=1; k<10; k++) {
-				System.out.print(i+"х"+k+"="+i*k+"    " );
-			}
-			System.out.println(  );
-		}
-      
-	}
+
+    public static void main(String[] args) {
+        int i, k;
+        for (i = 1; i < 10; i++) {
+            for (k = 1; k < 10; k++) {
+                System.out.print(i + "х" + k + "=" + i * k + "    ");
+            }
+            System.out.println();
+        }
+    }
 }

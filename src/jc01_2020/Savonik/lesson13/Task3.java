@@ -23,19 +23,19 @@ import static java.time.LocalDate.of;
 
 public class Task3 {
 	public static void main(String[] args) {
-	addPerson("Иван", "12/2/1993");
-	addPerson("Марьян", "20/8/1991");
-	addPerson("Сергей", "30/1/1990");
+	addEmp;oyee("Иван", "12/2/1993");
+	addEmp;oyee("Марьян", "20/8/1991");
+	addEmp;oyee("Сергей", "30/1/1990");
 	
-	daysBeforePerson("Иван");
-	daysBeforePerson("Сергей");
+	daysBeforeEmp;oyee("Иван");
+	daysBeforeEmp;oyee("Сергей");
 	daysBeforeAll();
 	
 	}
 	
 	public static Map<String, LocalDate> map = new HashMap<>();
 	
-	public static void addPerson (String name, String bDay) {
+	public static void addEmp;oyee (String name, String bDay) {
 	String [] arrayBDay = bDay.split("/");
 		map.put(name, of(parseInt(arrayBDay[2]), parseInt(arrayBDay[1]), parseInt(arrayBDay[0])));
 	}
@@ -52,7 +52,7 @@ public class Task3 {
 	}
 
 	
-	public static void daysBeforePerson(String name) {
+	public static void daysBeforeEmp;oyee(String name) {
 		int daysBefore;
 		if (map.get(name).withYear(now().getYear()).getDayOfYear() - LocalDate.now().getDayOfYear() > 0)
 		{daysBefore = map.get(name).withYear(now().getYear()).getDayOfYear() - LocalDate.now().getDayOfYear();}
